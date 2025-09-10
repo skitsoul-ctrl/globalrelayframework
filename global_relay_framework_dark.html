@@ -1,0 +1,213 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Global Relay Framework — 12 Videos/Week</title>
+<style>
+  :root {
+    /* Superside-inspired dark palette */
+    --bg: #0e1b16;         /* deep green/black */
+    --surface: #0f241d;    /* card/lane background */
+    --panel: #0f241d;
+    --text: #e6f6ed;       /* off-white */
+    --muted: #9eb5aa;      /* grey-green */
+    --line: #214b3d;       /* subtle line */
+    --accent: #6fff9f;     /* neon green */
+    --accent-2: #59e2b0;   /* secondary green for arrows */
+    --flag: #ffd166;       /* warm flag for H1/H2/H3 */
+    --ai: #123327;         /* darker green for AI band */
+    --box: #102820;        /* step box */
+    --box-border: #1d4a3a; /* step box border */
+    --chip-bg: #0b1f19;
+    --chip-border: #1a3a30;
+    --btn-text: #0b1c16;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 28px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    background: linear-gradient(180deg, var(--bg) 0%, #0b1512 100%);
+    color: var(--text);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; }
+  h1 { margin: 0 0 6px; font-size: 30px; letter-spacing: -0.2px; color: var(--accent); }
+  .subtitle { color: var(--muted); margin-bottom: 18px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0 18px; }
+  .chip {
+    display: inline-block; padding: 6px 12px; border: 1px solid var(--chip-border);
+    color: var(--muted); border-radius: 999px; font-size: 12px; background: var(--chip-bg);
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  }
+  svg { width: 100%; height: auto; display: block; }
+  .lane-title { font-weight: 700; fill: var(--text); }
+  .lane-rect { fill: rgba(255,255,255,0.02); stroke: var(--line); }
+  .lane-desc { fill: var(--muted); font-size: 12px; }
+  .step-rect { fill: var(--box); stroke: var(--box-border); }
+  .step-title { font-weight: 800; fill: var(--text); }
+  .step-sub { fill: var(--muted); }
+  .flag { fill: var(--flag); }
+  .flag-text { fill: #1b1b1b; font-weight: 800; }
+  .arrow { stroke: var(--accent-2); stroke-width: 2.8; marker-end: url(#arrowHead); }
+  .ai-band { fill: var(--ai); }
+  .ai-text { fill: var(--text); }
+  .wc { fill: #0c211a; stroke: var(--accent); stroke-width: 1.8; }
+  .wc-title { fill: var(--accent); font-weight: 800; }
+  .wc-text { fill: var(--text); font-size: 14px; }
+  .legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 14px;
+  }
+  .legend strong { color: var(--text); }
+  .btn {
+    display: inline-block; margin-top: 14px; padding: 10px 16px; border-radius: 12px;
+    color: var(--btn-text); background: var(--accent);
+    text-decoration: none; font-weight: 700;
+    box-shadow: 0 6px 18px rgba(111, 255, 159, 0.25);
+  }
+  @media (max-width: 720px) {
+    .legend { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Global Relay Framework — 12 Videos/Week</h1>
+    <div class="subtitle">Lead · EMEA · APAC · LATAM</div>
+
+    <div class="row">
+      <span class="chip">Frame.io check-ins</span>
+      <span class="chip">Slack handoffs (H1 H2 H3)</span>
+      <span class="chip">Premiere + After Effects</span>
+      <span class="chip">SOP + QC built in</span>
+      <span class="chip">AI QC on upload</span>
+    </div>
+
+    <div class="panel">
+      <svg viewBox="0 0 1200 940" role="img" aria-label="Global Relay Framework Diagram">
+        <!-- Defs -->
+        <defs>
+          <marker id="arrowHead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L9,3 L0,6 z" fill="#59e2b0"></path>
+          </marker>
+        </defs>
+
+        <!-- Lanes -->
+        <g>
+          <rect class="lane-rect" x="20" y="40" width="1160" height="140" rx="12"></rect>
+          <text class="lane-title" x="40" y="70">Lead Editor</text>
+          <text class="lane-desc" x="40" y="92">Set scope and priorities, guide the team, do final QC, and send clean edits to client</text>
+
+          <rect class="lane-rect" x="20" y="210" width="1160" height="140" rx="12"></rect>
+          <text class="lane-title" x="40" y="240">EMEA Junior</text>
+          <text class="lane-desc" x="40" y="262">Quick assembly edit, add basic color, double check work, and hand it off neatly</text>
+
+          <rect class="lane-rect" x="20" y="380" width="1160" height="140" rx="12"></rect>
+          <text class="lane-title" x="40" y="410">APAC Junior</text>
+          <text class="lane-desc" x="40" y="432">Add motion graphics and brand templates, check text, keep links to Premiere working</text>
+
+          <rect class="lane-rect" x="20" y="550" width="1160" height="140" rx="12"></rect>
+          <text class="lane-title" x="40" y="580">LATAM Junior</text>
+          <text class="lane-desc" x="40" y="602">Balance sound and music, add subtitles, check specs, and export final videos</text>
+        </g>
+
+        <!-- Lead: Brief + Review -->
+        <g>
+          <rect class="step-rect" x="60" y="104" width="280" height="68" rx="12"></rect>
+          <text class="step-title" x="200" y="128" text-anchor="middle">Brief and Scope Lock</text>
+          <text class="step-sub" x="200" y="150" text-anchor="middle">Priorities · Specs · Success</text>
+
+          <rect class="step-rect" x="900" y="104" width="280" height="68" rx="12"></rect>
+          <text class="step-title" x="1040" y="128" text-anchor="middle">Lead Review and Approval</text>
+          <text class="step-sub" x="1040" y="150" text-anchor="middle">Check issues · Send to client</text>
+        </g>
+
+        <!-- EMEA S1 -->
+        <g>
+          <rect class="step-rect" x="180" y="266" width="320" height="84" rx="12"></rect>
+          <text class="step-title" x="340" y="292" text-anchor="middle">S1 Assemble and Basic Color</text>
+          <text class="step-sub" x="340" y="318" text-anchor="middle">Self check before handoff · Frame.io link</text>
+          <!-- H1 flag -->
+          <rect x="510" y="258" width="40" height="24" rx="6" class="flag"></rect>
+          <text x="530" y="275" class="flag-text" text-anchor="middle">H1</text>
+        </g>
+
+        <!-- APAC S2 -->
+        <g>
+          <rect class="step-rect" x="640" y="436" width="320" height="84" rx="12"></rect>
+          <text class="step-title" x="800" y="462" text-anchor="middle">S2 Motion Pass</text>
+          <text class="step-sub" x="800" y="488" text-anchor="middle">Templates · Safe areas · Spell check</text>
+          <!-- H2 flag -->
+          <rect x="970" y="428" width="40" height="24" rx="6" class="flag"></rect>
+          <text x="990" y="445" class="flag-text" text-anchor="middle">H2</text>
+        </g>
+
+        <!-- LATAM S3 -->
+        <g>
+          <rect class="step-rect" x="900" y="606" width="280" height="84" rx="12"></rect>
+          <text class="step-title" x="1040" y="632" text-anchor="middle">S3 Audio · Subtitles · Specs</text>
+          <text class="step-sub" x="1040" y="658" text-anchor="middle">Mix · Subtitles · Exports</text>
+          <!-- H3 flag -->
+          <rect x="870" y="598" width="40" height="24" rx="6" class="flag"></rect>
+          <text x="890" y="615" class="flag-text" text-anchor="middle">H3</text>
+        </g>
+
+        <!-- Arrows -->
+        <line class="arrow" x1="320" y1="138" x2="180" y2="300"></line> <!-- Brief -> S1 -->
+        <line class="arrow" x1="500" y1="300" x2="640" y2="468"></line> <!-- S1 -> S2 -->
+        <line class="arrow" x1="960" y1="468" x2="900" y2="638"></line> <!-- S2 -> S3 -->
+        <line class="arrow" x1="1040" y1="638" x2="1040" y2="172"></line> <!-- S3 -> Lead Review -->
+
+        <!-- AI QC -->
+        <g>
+          <rect class="ai-band" x="20" y="730" width="1160" height="52" rx="12"></rect>
+          <text class="ai-text" x="600" y="761" text-anchor="middle">AI checks the final 4 videos and the brief, then sends me a short report</text>
+        </g>
+
+        <!-- Weekly cadence -->
+        <g>
+          <rect class="wc" x="640" y="790" width="540" height="100" rx="14"></rect>
+          <text class="wc-title" x="910" y="818" text-anchor="middle">Weekly Cadence</text>
+          <text class="wc-text" x="910" y="844" text-anchor="middle">Mon Batch A · Tue Batch B · Wed Batch C · Thu Buffer and Delivery (EOP EST)</text>
+        </g>
+      </svg>
+
+      <div class="legend">
+        <div><strong>H1 H2 H3</strong> handoffs posted in Slack and Frame.io with a quick checklist</div>
+        <div><strong>Handoff package</strong> Project file, linked graphics files, asset list, Frame.io link, short changelog, next steps</div>
+        <div><strong>Tools</strong> Premiere, After Effects, Frame.io, Slack, Google Drive</div>
+        <div><strong>SOPs</strong> Naming, color space, loudness targets, captions, export presets</div>
+        <div><strong>QC rhythm</strong> Self check in each lane, LATAM full tech check, AI check on upload</div>
+        <div><strong>Metrics</strong> On time, QC pass rate, number of revisions, cycle time</div>
+      </div>
+    </div>
+
+    <a class="btn" href="#" onclick="downloadHTML();return false;">Download this page as HTML</a>
+  </div>
+
+<script>
+function downloadHTML(){
+  const content = document.documentElement.outerHTML;
+  const blob = new Blob([content], {type: 'text/html'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'global_relay_framework.html';
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 1000);
+}
+</script>
+</body>
+</html>
